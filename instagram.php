@@ -15,22 +15,22 @@ function Instagram($action, $data = []){
 
 if($action == "getid"){
 	# Get Page User ID:
-	echo Instagram($action, $_GET['username']); exit();
+	echo Instagram($action, ['username' => $_GET['username']]); exit();
 }elseif($action == "profile"){
 	# Get Page Profile Information:
-	echo Instagram($action, $_GET['username']); exit();
+	echo Instagram($action, ['username' => $_GET['username']]); exit();
 }elseif($action == "storie"){
 	# Download Page Stories:
-	echo Instagram($action, $_GET['username']); exit();
+	echo Instagram($action, ['username' => $_GET['username']]); exit();
 }elseif($action == "highlight"){
 	# Download Page Highlights:
-	echo Instagram($action, $_GET['link']); exit();
+	echo Instagram($action, ['link' => $_GET['link']]); exit();
 }elseif($action == "post"){
 	# Download Page Posts:
-	echo Instagram($action, $_GET['link']); exit();
+	echo Instagram($action, ['link' => $_GET['link']]); exit();
 }elseif($action == "lastpost"){
 	# Download Page Last Posts:
-	echo Instagram($action, $_GET['username']); exit();
+	echo Instagram($action, ['username' => $_GET['username']]); exit();
 }else{
 	echo json_encode(['ok' => false, 'status' => "action not found."]);
 }
