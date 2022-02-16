@@ -26,6 +26,3 @@ instagram.php?action=post&link=https://www.instagram.com/p/BizeZ8TFSw9
 # Get Page Last Posts:
 instagram.php?action=lastpost&username=instagram
 ```
-<div style="display:flex;">
- <img align="center" src="https://raw.githubusercontent.com/iNeoTeam/DateConvert/main/DateConvert-Image.png" />
- </div>
