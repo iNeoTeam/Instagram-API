@@ -2,8 +2,10 @@
 error_reporting(0);
 header("content-type: application/json; charset= UTF-8");
 $action = strtolower($_GET['action']);
+define('ACCESS_KEY', "API-ACCESS-TOKEN"); # Get from: T.me/APIManager_Bot?start=api-instagram
 function Instagram($action, $data = []){
 	$data['action'] = $action;
+	$data['accessKey'] = ACCESS_KEY;
 	$cURL = curl_init();
 	curl_setopt($cURL, CURLOPT_URL, "https://api.ineo-team.ir/instagram.php?".http_build_query($data));
 	curl_setopt($cURL, CURLOPT_RETURNTRANSFER, true);
